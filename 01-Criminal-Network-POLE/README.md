@@ -14,6 +14,7 @@ Traditional law enforcement reporting often prioritizes suspects based on **inci
 * **Algorithms:** * **PageRank:** To measure prestige and quality of connections.
     * **Betweenness Centrality:** To identify bottlenecks and information brokers.
     * **Nodal Density:** To identify localized clusters of high-risk activity.
+    * View all technical queries used in this investigation [here](./queries.cypher).
 
 ## Key Discovery: Phillip vs. Jessica
 By comparing "Surface Activity" (Crime Count) with "Network Influence" (Centrality), a critical anomaly was discovered.
