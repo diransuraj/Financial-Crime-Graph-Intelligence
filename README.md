@@ -11,3 +11,13 @@ A collection of Graph Data Science investigations using Neo4j and GDS to identif
 ### 🔜 Upcoming Projects
 * **Synthetic Identity Detection:** Finding "Collusion Rings" using shared PII.
 * **Money Laundering:** Detecting circular payment flows using Cycle Detection.
+
+---
+## 🛠 Technical Toolkit
+* **Graph Databases:** Neo4j (Cypher, GDS)
+* **Data Science:** Python (Pandas, Jupyter), Network Analysis
+* **Domain:** Fraud Detection, Anti-Money Laundering (AML), Link Analysis
+
+## 📬 Contact
+* **LinkedIn:** (https://www.linkedin.com/in/diran-s/)
+* **Role Interests:** Fraud Analyst, Financial Crime Investigator, Graph Data Analyst
