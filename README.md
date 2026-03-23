@@ -4,7 +4,7 @@ A collection of Graph Data Science investigations using Neo4j and GDS to identif
 
 ## 📁 Projects
 
-### [01. Criminal Link Analysis (POLE Dataset)](./01-Criminal-Network-POLE)
+### [01. Criminal Link Analysis (POLE Dataset)](01. Criminal Link Analysis (POLE Dataset))
 **Goal:** Identify hidden "Quiet Kingpins" using Betweenness Centrality.
 **Result:** Unmasked a strategic broker (Jessica) with a centrality score of 26,533.
 
