@@ -318,6 +318,21 @@ The system architecture mirrors production AML systems used by financial institu
 
 **Composite Weighting:** Smart Rule 30%, Random Forest 70%
 
+## SQL Queries
+
+All detection logic is implemented in SQL for transparency and auditability. The [`queries.sql`](queries.sql) file contains:
+
+- **Smart Rule:** 3-signal money mule detection
+- **Amount Risk Analysis:** U-shaped fraud curve validation
+- **Signal Analysis:** Individual risk indicator performance
+- **Threshold Optimization:** Calibration for optimal precision
+- **Velocity Analysis:** Transaction frequency patterns
+- **Feature Engineering:** 18 features for the ML model
+- **Composite Risk Scoring:** SQL implementation of final scoring
+- **Operational Metrics:** Alert volume projections
+
+These queries run on the Paysim dataset and can be adapted for any transaction monitoring system.
+
 ---
 
 This project is available on [GitHub] and demonstrates proficiency in AML concepts, data analysis, machine learning, and production system design.
