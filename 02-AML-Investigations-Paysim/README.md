@@ -24,14 +24,27 @@ I systematically tested evasion strategies:
 
 ---
 
-## Regulatory Context
+## Regulatory Context: SAR Readiness
 
-| Regulation | Requirement | How This System Addresses It |
-| :--- | :--- | :--- |
-| UK MLR 2017, Reg 33 | Ongoing monitoring | Layered detection across 3 approaches |
-| FCA Financial Crime Guide | Transaction scrutiny | 18 features capturing multiple risk signals |
-| US BSA | SAR reporting | Produces explainable risk scores with clear narratives |
-| **6AMLD** | Expanded predicate offenses | Pattern detection across multiple transaction types |
+My detection system outputs all information required for Suspicious Activity Reports under UK MLR 2017 and US BSA:
+
+| SAR Requirement | How My System Addresses It |
+| :--- | :--- |
+| **Subject identification** | Tracks originator and recipient account IDs |
+| **Activity description** | Records amount, timestamp, transaction type, balance changes |
+| **Red flags / typologies** | Flags specific patterns: balance wipe, fresh recipient, mismatch, structuring |
+| **Risk assessment** | Composite risk score (0-100) for prioritization |
+
+**Example:** A transaction flagged as CRITICAL (score ≥75) would provide an investigator with:
+- All parties involved
+- Transaction details
+- Specific red flags triggered (e.g., "balance_wipe AND transfer_to_fresh")
+- ML confidence score
+
+This equips investigators to file a complete SAR without additional system queries. 
+
+*Note: This project demonstrates the detection infrastructure. Actual SAR filing would follow standard regulatory channels.*
+
 ---
 
 ## 1. Project Architecture
