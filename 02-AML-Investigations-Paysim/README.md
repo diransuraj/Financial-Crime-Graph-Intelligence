@@ -7,19 +7,31 @@ This case study presents a complete, production-ready Anti-Money Laundering (AML
 
 **Key Achievement:** The composite system achieves **83.6% confidence scores** on critical fraud cases while maintaining a manageable **10,662 annual alerts**—catching **5,726 fraud cases** (70% of all fraud) with **53.7% precision** (1 in 2 alerts is fraud).
 
+## The Red Flag: Money Mule Networks
+
+**What I'm trying to detect:** Coordinated account networks where funds move rapidly from compromised accounts through fresh recipient accounts with immediate onward movement (layering).
+
+**The Pattern:** Account wipe → Transfer → Fresh recipient → Balance mismatch → Onward movement
+
+**Adversarial Thinking:** *"If I were a fraudster, how would I beat this detection?"*
+
+I systematically tested evasion strategies:
+- Avoid $400k threshold → Caught by `transfer_to_fresh` (any amount)
+- Use established recipients → Caught by `wipe_and_transfer`
+- Stay in "safe zone" amounts → Caught by U-shaped `log_amount` feature
+
+*This adversarial mindset—required for the CFE exam—informed every detection layer.*
+
+---
+
 ## Regulatory Context
 
-This case study addresses requirements under:
-- **UK Money Laundering Regulations 2017** — Ongoing monitoring obligations (Regulation 33)
-- **FCA Financial Crime Guide** — Requirements for transaction monitoring systems
-- **EU 6th Anti-Money Laundering Directive (6AMLD)** — Expanded predicate offenses
-- **US Bank Secrecy Act (BSA)** — Suspicious Activity Reporting (SAR) requirements
-
-**Key Regulatory Requirement Addressed:** 
-Regulation 33 of the UK MLR 2017 requires firms to conduct "ongoing monitoring of a business relationship, including scrutiny of transactions... to ensure that transactions are consistent with the firm's knowledge of the customer."
-
-This system implements layered monitoring across three detection approaches to meet this requirement while minimizing false positives.
-
+| Regulation | Requirement | How This System Addresses It |
+| :--- | :--- | :--- |
+| UK MLR 2017, Reg 33 | Ongoing monitoring | Layered detection across 3 approaches |
+| FCA Financial Crime Guide | Transaction scrutiny | 18 features capturing multiple risk signals |
+| US BSA | SAR reporting | Produces explainable risk scores with clear narratives |
+| **6AMLD** | Expanded predicate offenses | Pattern detection across multiple transaction types |
 ---
 
 ## 1. Project Architecture
