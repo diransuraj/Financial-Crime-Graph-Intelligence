@@ -1,7 +1,7 @@
 -- ============================================================
 -- AML TRANSACTION MONITORING SYSTEM: CORE QUERIES
 -- ============================================================
--- Author: [Your Name]
+-- Author: Diran Suraj
 -- Dataset: Paysim
 -- Purpose: Detection queries for money mule patterns, structuring,
 --          and risk scoring
