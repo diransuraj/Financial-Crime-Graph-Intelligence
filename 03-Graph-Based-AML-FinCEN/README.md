@@ -1,7 +1,3 @@
-This is an excellent template — clear, structured, and professional. Here's how I'd adapt it for your FinCEN graph project:
-
----
-
 # Graph-Based AML Detection: A FinCEN Files Case Study
 ## Proactive Identification of Complex Fraud Rings Using Graph Analytics
 
