@@ -333,6 +333,3 @@ All detection logic is implemented in SQL for transparency and auditability. The
 
 These queries run on the Paysim dataset and can be adapted for any transaction monitoring system.
 
----
-
-This project is available on [GitHub] and demonstrates proficiency in AML concepts, data analysis, machine learning, and production system design.
